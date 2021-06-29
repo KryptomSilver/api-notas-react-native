@@ -1,0 +1,26 @@
+###Crear nota
+POST http://localhost:4000/api/notes/
+Content-Type: application/json
+
+{
+    "title": "Hacer ejercicio",
+    "description":"Hacer ejercicio en el gym",
+    "color":"#4287f5"
+}
+
+###Editar nota 
+PUT http://localhost:4000/api/notes/60db67ad115b903742251e54
+Content-Type: application/json
+
+{
+    "title": "Hacer",
+    "description":"Hacer ejercicio en el gym",
+    "color":"#4287f5"
+}
+
+###Eliminar nota
+DELETE http://localhost:4000/api/notes/60db67ad115b903742251e54
+
+
+###Obtener notas 
+GET http://localhost:4000/api/notes

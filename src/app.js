@@ -1,6 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
+import RoutesNotes from './routes/notes.routes'
 
 //--- Setings ---
 //Crear servidor con express
@@ -9,7 +10,7 @@ const app = express();
 app.set("port", process.env.PORT || 4000);
 
 //--- Middlewares
-//Perimitir que otrso servidores se conecten
+//Perimitir que otros servidores se conecten
 //Lista para poder configurar el cors
 const configCors = {};
 app.use(cors(configCors));
@@ -24,6 +25,7 @@ app.use(express.urlencoded({ extended: false }));
 app.get("/", (req,res) => {
     res.json({ message: "Bienvenido a la API" });
 });
-
+//Rutas de las notas
+app.use("/api/notes",RoutesNotes)
 
 export default app;
