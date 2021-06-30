@@ -23,4 +23,6 @@ router.put(
 router.delete("/:id", NoteCtrl.deleteNote);
 //Obtener notas
 router.get("/", NoteCtrl.getNotes);
+//Obtener nota
+router.get("/:id", NoteCtrl.getNote);
 export default router;

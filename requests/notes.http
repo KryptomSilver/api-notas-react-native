@@ -5,7 +5,7 @@ Content-Type: application/json
 {
     "title": "Hacer ejercicio",
     "description":"Hacer ejercicio en el gym",
-    "color":"#4287f5"
+    "color":"#a5ff9c"
 }
 
 ###Editar nota 
@@ -19,8 +19,11 @@ Content-Type: application/json
 }
 
 ###Eliminar nota
-DELETE http://localhost:4000/api/notes/60db67ad115b903742251e54
+DELETE http://localhost:4000/api/notes/60db94ad58b10837b46e78ee
 
 
 ###Obtener notas 
 GET http://localhost:4000/api/notes
+
+###Obtener nota
+GET http://localhost:4000/api/notes/60db94ad58b10837b46e78ee

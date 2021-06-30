@@ -77,3 +77,22 @@ export const getNotes = async (req, res) => {
         });
     }
 };
+//Obtener nota
+export const getNote = async (req, res) => {
+    try {
+        const { params } = req;
+        const { id } = params;
+        //Buscar si el id de la nota existe
+        const noteSearch = await Note.findById(id);
+        //Comprobar si la nota existe
+        if (!noteSearch) {
+            return res.status(404).json({ msg: "No existe la nota" });
+        }
+        //Enviar notas
+        res.status(200).json(noteSearch);
+    } catch (error) {
+        res.status(500).json({
+            message: error.message || "Algo ocurrio mal",
+        });
+    }
+};
