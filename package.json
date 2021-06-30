@@ -4,8 +4,6 @@
     "description": "API para aplicación de react native de notas",
     "main": "index.js",
     "scripts": {
-        "dev": "nodemon src/index.js --exec babel-node",
-        "build": "babel src --out-dir dist",
         "start": "node dist/index.js"
     },
     "repository": {
